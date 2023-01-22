@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MeleeWeaponBehaviour : MonoBehaviour
 {
+    public WeaponScriptableObject weaponData;
+
     public float destroyAfterSeconds;
     // Start is called before the first frame update
     protected virtual void Start()

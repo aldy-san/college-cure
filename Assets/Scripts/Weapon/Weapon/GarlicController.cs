@@ -13,7 +13,7 @@ public class GarlicController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedGarlic = Instantiate(prefab);
+        GameObject spawnedGarlic = Instantiate(weaponData.prefab);
         spawnedGarlic.transform.position = transform.position;
         spawnedGarlic.GetComponent<KnifeBehaviour>().DirectionChecker(pm.shootDir);
     }
