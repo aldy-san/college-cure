@@ -10,6 +10,18 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     public float destroyAfterSeconds;
     protected bool freezeDirection = false;
 
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCooldownDuration;
+    protected int currentPierce;
+
+    void Awake()
+    {
+        currentDamage = weaponData.damage;
+        currentSpeed = weaponData.speed;
+        currentCooldownDuration = weaponData.cooldownDuration;
+        currentPierce = weaponData.pierce;
+    }
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -56,5 +68,23 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);
     }
+    protected virtual void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Enemy"))
+        {
+            EnemyStats enemy = col.GetComponent<EnemyStats>();
+            enemy.TakeDamage(currentDamage);
+            ReducePierce();
+        }
+        
+    }
 
+    protected virtual void ReducePierce()
+    {
+        currentPierce -= 1;
+        if (currentPierce <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

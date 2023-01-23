@@ -15,6 +15,5 @@ public class GarlicController : WeaponController
         base.Attack();
         GameObject spawnedGarlic = Instantiate(weaponData.prefab);
         spawnedGarlic.transform.position = transform.position;
-        spawnedGarlic.GetComponent<KnifeBehaviour>().DirectionChecker(pm.shootDir);
     }
 }
