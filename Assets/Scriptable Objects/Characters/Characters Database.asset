@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd86f66a54cf52e478038d8f6675bbb1, type: 3}
-  m_Name: Knight Character
+  m_Script: {fileID: 11500000, guid: d72bb83c827bec740933c841b6f0bc5c, type: 3}
+  m_Name: Characters Database
   m_EditorClassIdentifier: 
-  StartingWeapon: {fileID: 0}
-  MaxHealth: 100
-  Recovery: 0
-  MoveSpeed: 5
-  Might: 0
-  ProjectileSpeed: 0
-  Animation: {fileID: 9100000, guid: 8952c21fcd7313447b96ae52522d76e9, type: 2}
+  Characters:
+  - {fileID: 11400000, guid: 5384561e0b9f19f45818178df90d98a4, type: 2}
+  - {fileID: 11400000, guid: c683f87d427658749801491be5f84c1f, type: 2}

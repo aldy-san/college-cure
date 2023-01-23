@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public CharacterScriptableObject characterData;
+    CharacterScriptableObject characterData;
+    GameManager gameManager;
 
     float currentHealth;
     float currentRecovery;
@@ -13,10 +14,10 @@ public class PlayerStats : MonoBehaviour
     float currentProjectileSpeed;
 
     [Header("Experience/Level")]
-    public int experience = 0;
+    public float experience = 0;
     public int level = 1;
-    public int experienceCap = 100;
-    public int experienceCapIncrease = 0;
+    public float experienceCap = 100;
+    public float experienceCapIncrease = 1.25f;
 
     [Header("I-Frames")]
     public float invincibilityDuration;
@@ -24,6 +25,8 @@ public class PlayerStats : MonoBehaviour
     bool isInvicible;
     void Awake()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        characterData = gameManager.currentCharacterData;
         currentHealth = characterData.maxHealth;
         currentRecovery = characterData.recovery;
         currentMoveSpeed = characterData.moveSpeed;
@@ -55,7 +58,7 @@ public class PlayerStats : MonoBehaviour
         {
             level++;
             experience -= experienceCap;
-            experienceCap += experienceCapIncrease;
+            experienceCap *= experienceCapIncrease;
         }
     }
 

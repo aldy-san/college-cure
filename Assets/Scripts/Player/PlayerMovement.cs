@@ -8,10 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 shootDir;
 
     Rigidbody2D rb;
-    public CharacterScriptableObject characterData;
+    CharacterScriptableObject characterData;
+    GameManager gameManager;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameManager = FindObjectOfType<GameManager>();
+        characterData = gameManager.currentCharacterData;
         shootDir = new Vector2(1, 0);
     }
 

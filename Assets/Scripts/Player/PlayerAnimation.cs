@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     Animator am;
     PlayerMovement pm;
     SpriteRenderer sr;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,8 @@ public class PlayerAnimation : MonoBehaviour
         am = GetComponent<Animator>();
         pm = GetComponent<PlayerMovement>();
         sr = GetComponent<SpriteRenderer>();
+        gameManager = FindObjectOfType<GameManager>();
+        am.runtimeAnimatorController = gameManager.currentCharacterData.animation;
     }
 
     // Update is called once per frame

@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd86f66a54cf52e478038d8f6675bbb1, type: 3}
-  m_Name: Knight Character
+  m_Script: {fileID: 11500000, guid: 138039714d0bdb543a98cde75a89944a, type: 3}
+  m_Name: Test Weapon
   m_EditorClassIdentifier: 
-  StartingWeapon: {fileID: 0}
-  MaxHealth: 100
-  Recovery: 0
-  MoveSpeed: 5
-  Might: 0
-  ProjectileSpeed: 0
-  Animation: {fileID: 9100000, guid: 8952c21fcd7313447b96ae52522d76e9, type: 2}
+  Prefab: {fileID: 2512777620000340852, guid: 7b393dd9db15d5f44ad26e3bdc969043, type: 3}
+  Damage: 4
+  Speed: 5
+  CooldownDuration: 2
+  Pierce: 2

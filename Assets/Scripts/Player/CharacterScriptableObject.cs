@@ -30,4 +30,7 @@ public class CharacterScriptableObject : ScriptableObject
     float ProjectileSpeed;
     public float projectileSpeed { get => ProjectileSpeed; private set => ProjectileSpeed = value; }
 
+    [SerializeField]
+    RuntimeAnimatorController Animation;
+    public RuntimeAnimatorController animation { get => Animation; private set => Animation = value; }
 }
