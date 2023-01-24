@@ -7,7 +7,10 @@ public class PlayerStats : MonoBehaviour
     CharacterScriptableObject characterData;
     GameManager gameManager;
 
+    float currentMaxHealth;
+    public float CurrentMaxHealth { get => currentMaxHealth; private set => currentMaxHealth = value; }
     float currentHealth;
+    public float CurrentHealth { get => currentHealth; private set => currentHealth = value; }
     float currentRecovery;
     float currentMoveSpeed;
     float currentMight;
@@ -27,6 +30,7 @@ public class PlayerStats : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         characterData = gameManager.currentCharacterData;
+        currentMaxHealth = characterData.maxHealth;
         currentHealth = characterData.maxHealth;
         currentRecovery = characterData.recovery;
         currentMoveSpeed = characterData.moveSpeed;
@@ -58,7 +62,7 @@ public class PlayerStats : MonoBehaviour
         {
             level++;
             experience -= experienceCap;
-            experienceCap *= experienceCapIncrease;
+            experienceCap = experienceCap * experienceCapIncrease;
         }
     }
 
