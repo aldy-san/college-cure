@@ -8,7 +8,7 @@ public class PlayerCollector : MonoBehaviour
     {
         if (col.gameObject.TryGetComponent(out ICollectible collectible))
         {
-            collectible.Collect();
+          // collectible.Collect();
         }   
     }
 }

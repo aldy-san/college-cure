@@ -26,9 +26,13 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     float invincibilityTime;
     bool isInvicible;
+
+    [Header("Player Components")]
+    SpriteRenderer sr;
     void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        sr = GetComponent<SpriteRenderer>();
         characterData = gameManager.currentCharacterData;
         currentMaxHealth = characterData.maxHealth;
         currentHealth = characterData.maxHealth;
@@ -68,6 +72,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        StartCoroutine("HitEffect");
         if (!isInvicible)
         {
             currentHealth -= damage;
@@ -80,10 +85,14 @@ public class PlayerStats : MonoBehaviour
                 Kill();
             }
         }
-
-        
     }
+    IEnumerator HitEffect()
+    {
 
+        sr.color = new Color(1f, 0.4f, 0.4f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        sr.color = new Color(1f, 1f, 1f, 1f);
+    }
     public void Kill()
     {
         gameManager.GameOver();

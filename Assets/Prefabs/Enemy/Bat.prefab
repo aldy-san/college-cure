@@ -177,7 +177,7 @@ MonoBehaviour:
   drops:
   - name: Blue
     itemPrefab: {fileID: 4448994007216900347, guid: 497ee8e2a080a084c8c6aedad2e8123d, type: 3}
-    dropRate: 50
+    dropRate: 100
 --- !u!50 &-575771768056056041
 Rigidbody2D:
   serializedVersion: 4
