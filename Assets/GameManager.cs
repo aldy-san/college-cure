@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI timeText;
     public GameObject gameoverCanvas;
+    public Text timeResult;
     PlayerStats playerStats;
     void Awake()
     {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
+        timeText.text = timeText.text;
         gameoverCanvas.SetActive(true);
     }
     public void PauseGame()
