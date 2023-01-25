@@ -15,4 +15,4 @@ MonoBehaviour:
   Prefab: {fileID: 1165938391016385819, guid: 048bf8040b6ec8b4fb16e3c393fe1572, type: 3}
   Damage: 4
   MoveSpeed: 1
-  MaxHealth: 10
+  MaxHealth: 2
