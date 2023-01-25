@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Mage Character
   m_EditorClassIdentifier: 
   StartingWeapon: {fileID: 0}
-  MaxHealth: 0
-  Recovery: 0
+  Icon: {fileID: 21300000, guid: 750aba57ed11bde498450c5c441b62f6, type: 3}
+  MaxHealth: 50
+  Recovery: 10
   MoveSpeed: 5
   Might: 0
   ProjectileSpeed: 0

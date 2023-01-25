@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Knight Character
   m_EditorClassIdentifier: 
   StartingWeapon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 36a7023b596955b4985eccb3ecfb1654, type: 3}
   MaxHealth: 100
   Recovery: 0
   MoveSpeed: 5
