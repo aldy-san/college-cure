@@ -18,8 +18,29 @@ MonoBehaviour:
     enemies:
     - prefab: {fileID: 1165938391016385819, guid: 048bf8040b6ec8b4fb16e3c393fe1572, type: 3}
       spawnRate: 100
+    - prefab: {fileID: 8077961876945522784, guid: 12ae35ff61b4da542948281bc2bba9c2, type: 3}
+      spawnRate: 100
   - spawnTime: 2
     spawnCount: 3
     enemies:
     - prefab: {fileID: 2498317026157300718, guid: c502d8de5f37cd243a38586e4e50ab86, type: 3}
+      spawnRate: 100
+  - spawnTime: 2
+    spawnCount: 3
+    enemies:
+    - prefab: {fileID: 6197264706778474115, guid: c43e79eb2138e244fb571e9921dc9bc1, type: 3}
+      spawnRate: 100
+  - spawnTime: 2
+    spawnCount: 3
+    enemies:
+    - prefab: {fileID: 3534366789909780567, guid: 15e4a1b5cb088904c80de4d79d429406, type: 3}
+      spawnRate: 100
+  - spawnTime: 2
+    spawnCount: 3
+    enemies:
+    - prefab: {fileID: 1479561565534039466, guid: 5b826599dc4e89143bf1254beadf0379, type: 3}
+      spawnRate: 100
+    - prefab: {fileID: 3534366789909780567, guid: 15e4a1b5cb088904c80de4d79d429406, type: 3}
+      spawnRate: 100
+    - prefab: {fileID: 7607244919098490567, guid: f9c21636decf3134faebf7e4a797a68f, type: 3}
       spawnRate: 100

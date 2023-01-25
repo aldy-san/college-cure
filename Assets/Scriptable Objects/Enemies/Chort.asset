@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d1ef55ce8bb73f4d885d557c802dec9, type: 3}
-  m_Name: Big Demon Enemy
+  m_Name: Chort
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 2498317026157300718, guid: c502d8de5f37cd243a38586e4e50ab86, type: 3}
-  Damage: 3
+  Prefab: {fileID: 3534366789909780567, guid: 15e4a1b5cb088904c80de4d79d429406, type: 3}
+  Damage: 5
   MoveSpeed: 1
-  MaxHealth: 100
+  MaxHealth: 20
