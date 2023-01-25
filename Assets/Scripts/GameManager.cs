@@ -10,17 +10,22 @@ public class GameManager : MonoBehaviour
     public CharacterDatabase characterDB;
     [HideInInspector]public CharacterScriptableObject currentCharacterData;
     public float currentTime = 0; //seconds
+
     // UI
     public Slider hpSlider;
     public Slider expSlider;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI timeText;
     public GameObject gameoverCanvas;
-    public Text timeResult;
+    public SpriteRenderer characterIcon;
+
+    //GameOver UI
+    public TextMeshProUGUI resTimeText;
     PlayerStats playerStats;
     void Awake()
     {
         currentCharacterData = characterDB.characters[currentCharacter];
+        characterIcon.sprite = currentCharacterData.icon;
     }
     void Start()
     {
@@ -33,14 +38,14 @@ public class GameManager : MonoBehaviour
         levelText.text = "Level " + playerStats.level;
 
         currentTime += Time.deltaTime;
-        timeText.text = TimeSpan.FromSeconds(currentTime).ToString("mm':'ss'.'f");
+        timeText.text = "Time : " + TimeSpan.FromSeconds(currentTime).ToString("mm':'ss'.'f");
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
-        timeText.text = timeText.text;
         gameoverCanvas.SetActive(true);
+        resTimeText.text = timeText.text;
     }
     public void PauseGame()
     {

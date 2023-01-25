@@ -9,6 +9,9 @@ public class CharacterScriptableObject : ScriptableObject
     [SerializeField]
     GameObject StartingWeapon;
     public GameObject startingWeapon { get => StartingWeapon; private set => StartingWeapon = value; }
+    [SerializeField]
+    Sprite Icon;
+    public Sprite icon { get => Icon; private set => Icon = value; }
 
     [SerializeField]
     float MaxHealth;

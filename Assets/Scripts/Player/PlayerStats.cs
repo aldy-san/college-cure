@@ -29,6 +29,8 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Player Components")]
     SpriteRenderer sr;
+
+    float timer;
     void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -44,7 +46,12 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-        if(invincibilityTime > 0)
+        InvicibilityChecker();
+        Recovery();
+    }
+    void InvicibilityChecker()
+    {
+        if (invincibilityTime > 0)
         {
             invincibilityTime -= Time.deltaTime;
         }
@@ -53,7 +60,6 @@ public class PlayerStats : MonoBehaviour
             isInvicible = false;
         }
     }
-
     public void InccreaseExperience(int amount)
     {
         experience += amount;
@@ -67,6 +73,26 @@ public class PlayerStats : MonoBehaviour
             level++;
             experience -= experienceCap;
             experienceCap = experienceCap * experienceCapIncrease;
+        }
+    }
+    void Recovery()
+    {
+        if (CurrentHealth < CurrentMaxHealth)
+        {
+            timer += Time.deltaTime;
+            if(timer > 5)
+            {
+                timer = 0;
+                RestoreHP(currentRecovery);
+            }
+        }
+    }
+    public void RestoreHP(float amount)
+    {
+        currentHealth += amount;
+        if (currentHealth >= currentMaxHealth)
+        {
+            currentHealth = currentMaxHealth;
         }
     }
 
