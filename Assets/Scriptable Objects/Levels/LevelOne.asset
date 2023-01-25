@@ -21,5 +21,5 @@ MonoBehaviour:
   - spawnTime: 2
     spawnCount: 3
     enemies:
-    - prefab: {fileID: 1165938391016385819, guid: 048bf8040b6ec8b4fb16e3c393fe1572, type: 3}
+    - prefab: {fileID: 2498317026157300718, guid: c502d8de5f37cd243a38586e4e50ab86, type: 3}
       spawnRate: 100
