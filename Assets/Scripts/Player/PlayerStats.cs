@@ -86,7 +86,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Kill()
     {
-        //kill
+        gameManager.GameOver();
     }
 
 }
