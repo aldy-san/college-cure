@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ce53268e9115f04c9f4037a21c25bbb, type: 3}
-  m_Name: LevelOne
+  m_Name: Level 1
   m_EditorClassIdentifier: 
   Waves:
   - spawnTime: 3
@@ -18,3 +18,7 @@ MonoBehaviour:
     enemies:
     - prefab: {fileID: 1165938391016385819, guid: 048bf8040b6ec8b4fb16e3c393fe1572, type: 3}
       spawnRate: 100
+  Terrains:
+  - {fileID: 5705207201050713775, guid: a332749d8a4d27444870268323ac91bc, type: 3}
+  - {fileID: 5705207201050713775, guid: 65d53adc7b6944c42b55af939c36f330, type: 3}
+  - {fileID: 5705207201050713775, guid: c4adf109e8f123449bb67e6e8d35306e, type: 3}

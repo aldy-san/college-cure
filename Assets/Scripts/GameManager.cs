@@ -7,10 +7,11 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public int currentCharacter = 0;
+    public int currentLevel = 1;
     public CharacterDatabase characterDB;
+    public LevelDatabase levelData;
     [HideInInspector]public CharacterScriptableObject currentCharacterData;
     public float currentTime = 0; //seconds
-
     // UI
     public Slider hpSlider;
     public Slider expSlider;

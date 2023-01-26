@@ -22,4 +22,8 @@ public class LevelScriptableObject : ScriptableObject
     [SerializeField]
     List<Wave> Waves;
     public List<Wave> waves { get => Waves; private set => Waves = value; }
+
+    [SerializeField]
+    List<GameObject> Terrains;
+    public List<GameObject> terrains { get => Terrains; private set => Terrains = value; }
 }

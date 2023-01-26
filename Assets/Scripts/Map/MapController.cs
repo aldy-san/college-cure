@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    GameManager gameManager;
     public List<GameObject> terrainChunks;
     public GameObject player;
     public float checkerRadius;
     Vector3 noTerrainPosition;
     public LayerMask terrainMask;
     PlayerMovement pm;
-    public GameObject currentChunk;
+    [HideInInspector]public GameObject currentChunk;
 
     [Header("Optimazition")]
-    public List<GameObject> spawnedChunks;
+    [HideInInspector]public List<GameObject> spawnedChunks;
     GameObject latestChunk;
     public float maxOpDist;
     float opDist;
@@ -22,7 +23,11 @@ public class MapController : MonoBehaviour
     void Start()
     {
         pm = FindObjectOfType<PlayerMovement>();
-        
+        gameManager = FindObjectOfType<GameManager>();
+        terrainChunks = gameManager.levelData.levels[gameManager.currentLevel - 1].terrains;
+        GameObject firstChunk = Instantiate(terrainChunks[0], new Vector2(0,0), Quaternion.identity);
+        firstChunk.transform.parent = transform;
+        spawnedChunks.Add(firstChunk);
     }
 
     // Update is called once per frame
